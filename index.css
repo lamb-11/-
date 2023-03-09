@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/bg.jpg) no-repeat;
+}
+
+ul {
+  list-style: none;
+}
+
+#frame {
+  position: relative;
+  width: 800px;
+  height: 550px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav {
+  position: relative;
+  height: 60px;
+  background-color: #1eacda;
+  z-index: 99;
+}
+
+nav #logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+nav #search {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 300px;
+  height: 37px;
+  padding-left: 15px;
+  border-radius: 17px;
+  background-color: #83d1eb;
+  border: 0;
+  outline: none;
+}
+
+nav #send {
+  display: block;
+  position: absolute;
+  right: 33px;
+  top: 20px;
+}
+
+#content {
+  position: relative;
+  width: 800px;
+  box-sizing: border-box;
+  height: 435px;
+}
+
+#content #leftsidebar {
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  height: 435px;
+  padding: 10px;
+}
+
+#content #leftsidebar #song_list {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  color: #1f1e1e;
+}
+
+#content #leftsidebar #song_list li {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  background-color: rgba(221, 212, 196, 0.5);
+}
+
+#content #leftsidebar #song_list li #music {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+#content #leftsidebar #song_list li #music img {
+  width: 100%;
+  height: 100%;
+}
+
+#content #leftsidebar #song_list li p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 35px;
+}
+
+#content #leftsidebar #song_list li #vedio {
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  width: 20px;
+  height: 15px;
+  background: url(images/table.png);
+  background-position: -1px -49px;
+  cursor: pointer;
+}
+
+#content #leftsidebar #song_list li:nth-child(2n) {
+  background-color: transparent;
+}
+
+#content #leftsidebar li::-webkit-scrollbar {
+  width: 0px;
+}
+
+#content #leftsidebar img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#content .play {
+  position: absolute;
+  left: 200px;
+  width: 400px;
+  height: 435px;
+}
+
+#content .play .play_icon {
+  position: absolute;
+  left: 195px;
+  top: -8px;
+  z-index: 9;
+  transform-origin: 12px 12px;
+  transform: rotate(-29deg);
+  transition: 1s;
+}
+
+#content .play #tray_icon {
+  position: absolute;
+  left: 70px;
+  top: 60px;
+  z-index: 4;
+}
+
+#content .play .pic {
+  position: absolute;
+  left: 127px;
+  top: 118px;
+  width: 142px;
+  height: 142px;
+  z-index: 3;
+}
+
+#content #rightsidebar {
+  position: absolute;
+  left: 600px;
+  width: 200px;
+  height: 435px;
+  padding: 0px 10px 0 10px;
+}
+
+#content #rightsidebar #leave {
+  width: 200px;
+  height: 435px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#content #rightsidebar #leave #header {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+#content #rightsidebar h4 {
+  position: sticky;
+  top: 70px;
+  margin: 0;
+  height: 28px;
+  width: 190px;
+  font: normal 700 14px/1.5 '微软雅黑';
+  z-index: 99;
+}
+
+#content #rightsidebar dl {
+  margin: 5px 5px;
+  width: 180px;
+}
+
+#content #rightsidebar dl #name {
+  margin-top: -30px;
+  margin-left: 50px;
+  width: 125px;
+  font: normal 700 12px/1.5 '微软雅黑';
+}
+
+#content #rightsidebar dl #feel {
+  margin-top: 5px;
+  margin-left: 45px;
+  width: 125px;
+  color: #5c5a5a;
+  font: normal 400 12px/1.5 '黑体';
+}
+
+#content #rightsidebar dt {
+  width: 40px;
+  height: 40px;
+}
+
+#content ::-webkit-scrollbar {
+  width: 0;
+}
+
+#content #line-right {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes Rotate {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.autoRotate {
+  animation-name: Rotate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.play .stratMove {
+  animation-play-state: running;
+}
+
+#content .play .Star_move {
+  transform: rotate(0deg);
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 800px;
+  height: 50px;
+  background-color: #f1f3f4;
+}
+
+footer audio {
+  width: 800px;
+}
+
+.video_cover #video {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -273px;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 546px;
+  z-index: 1000;
+}
+
+.video_cover #mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+}
